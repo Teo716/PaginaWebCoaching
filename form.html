@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Agendar sesión | Barbara Formoso Coaching</title>
+    <meta
+      name="description"
+      content="Reservá tu primera conversación con Barbara Formoso. Completá el formulario y coordinamos día y horario."
+    />
+    <link rel="icon" href="img/logo.png" />
+    <meta name="theme-color" content="#3f4c27" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Barbara Formoso Coaching" />
+    <meta property="og:title" content="Agendar sesión | Barbara Formoso Coaching" />
+    <meta property="og:description" content="Reservá tu primera conversación con Barbara Formoso. Completá el formulario y coordinamos día y horario." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Droid+Serif:wght@400;700&family=Public+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a class="header__brand" href="index.html" aria-label="Barbara Formoso Coaching, ir al inicio">
+          <img class="header__logo" src="img/logo.png" alt="" width="52" height="52" />
+          <p class="header__title">Barbara Formoso <br />Coaching</p>
+        </a>
+
+        <nav class="header__nav" aria-label="Principal">
+          <ul class="header__nav-list">
+            <li><a class="header__nav-link" href="index.html">Inicio</a></li>
+            <li><a class="header__nav-link" href="sobre-mi.html">Sobre mí</a></li>
+            <li><a class="header__nav-link" href="servicios.html">Servicios</a></li>
+            <li><a class="header__nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <a class="header__photo" href="sobre-mi.html" aria-label="Conocé a Barbara">
+          <img src="img/barbara_avatar.jpg" alt="" width="56" height="56" />
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero page-hero--compact">
+        <div class="container page-hero__container page-hero__container--solo">
+          <div class="page-hero__content">
+            <span class="hero__tag page-hero__tag">Agendar sesión</span>
+            <h1 class="page-hero__title">Reservá tu primera conversación.</h1>
+            <p class="page-hero__text">
+              Contame un poco sobre vos y lo que querés trabajar. Te escribo
+              para coordinar día y horario.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container booking">
+          <form
+            class="form js-booking"
+            action="https://formspree.io/f/TU_ID_DE_FORMSPREE"
+            method="POST"
+            data-reveal
+          >
+            <input type="hidden" name="_subject" value="Nueva solicitud de sesión desde la web" />
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" />
+            <div class="form__row">
+              <div class="form__field">
+                <label class="form__label" for="nombre">Nombre y apellido</label>
+                <input class="form__input" id="nombre" name="nombre" type="text" autocomplete="name" required />
+                <p class="form__error" aria-live="polite"></p>
+              </div>
+
+              <div class="form__field">
+                <label class="form__label" for="email">Email</label>
+                <input class="form__input" id="email" name="email" type="email" autocomplete="email" required />
+                <p class="form__error" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="form__field">
+                <label class="form__label" for="telefono">
+                  Teléfono <span class="form__optional">(opcional)</span>
+                </label>
+                <input class="form__input" id="telefono" name="telefono" type="tel" autocomplete="tel" />
+                <p class="form__error" aria-live="polite"></p>
+              </div>
+
+              <div class="form__field">
+                <label class="form__label" for="servicio">Servicio</label>
+                <select class="form__input" id="servicio" name="servicio" required>
+                  <option value="" disabled selected>Elegí una opción</option>
+                  <option value="sesion">Sesión individual o exploratoria</option>
+                  <option value="proceso">Proceso de coaching ontológico</option>
+                  <option value="no-se">Todavía no sé</option>
+                </select>
+                <p class="form__error" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <fieldset class="form__field">
+                <legend class="form__label">Modalidad</legend>
+                <div class="form__options">
+                  <label class="option">
+                    <input type="radio" name="modalidad" value="online" checked />
+                    <span>Online</span>
+                  </label>
+                  <label class="option">
+                    <input type="radio" name="modalidad" value="presencial" />
+                    <span>Presencial</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="form__field">
+                <label class="form__label" for="horario">Horario preferido</label>
+                <select class="form__input" id="horario" name="horario">
+                  <option value="indistinto">Indistinto</option>
+                  <option value="manana">Mañana</option>
+                  <option value="tarde">Tarde</option>
+                  <option value="noche">Noche</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="mensaje">¿Qué te gustaría trabajar?</label>
+              <textarea class="form__input" id="mensaje" name="mensaje" minlength="10" required></textarea>
+              <p class="form__error" aria-live="polite"></p>
+            </div>
+
+            <div class="form__field">
+              <label class="form__check">
+                <input type="checkbox" name="acepto" required />
+                <span>Acepto que mis datos se usen solo para responder esta consulta.</span>
+              </label>
+              <p class="form__error" aria-live="polite"></p>
+            </div>
+
+            <p class="form__status" role="alert" hidden></p>
+
+            <button class="button form__submit" type="submit">Enviar solicitud</button>
+          </form>
+
+          <div class="form-success" tabindex="-1" hidden>
+            <span class="form-success__icon" aria-hidden="true">✓</span>
+            <h2 class="section-title">¡Gracias! Recibí tu mensaje.</h2>
+            <p class="section-text">Te escribo pronto para coordinar nuestra primera conversación.</p>
+            <p class="form-success__demo" hidden>
+              Modo demo. El formulario todavía no está conectado a Formspree, así
+              que este mensaje no se envió.
+            </p>
+            <a class="button hero__secondary-button" href="index.html">Volver al inicio</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div>
+          <h2 class="footer__title">¿Tenés dudas?</h2>
+          <p class="footer__text">Escribime por el canal que prefieras.</p>
+        </div>
+        <a class="button" href="contacto.html">Ir a contacto</a>
+      </div>
+
+      <div class="container footer__bottom">
+        <nav aria-label="Pie de página">
+          <ul class="footer__links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <p>© <span data-year>2026</span> Barbara Formoso Coaching</p>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

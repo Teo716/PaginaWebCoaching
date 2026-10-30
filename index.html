@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Barbara Formoso | Coaching</title>
+    <meta
+      name="description"
+      content="Coaching integral para profesionales y líderes que buscan recuperar equilibrio, claridad y dirección."
+    />
+    <link rel="icon" href="img/logo.png" />
+    <meta name="theme-color" content="#3f4c27" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Barbara Formoso Coaching" />
+    <meta property="og:title" content="Barbara Formoso | Coaching" />
+    <meta property="og:description" content="Coaching integral para profesionales y líderes que buscan recuperar equilibrio, claridad y dirección." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,42 +32,38 @@
   <body>
     <header class="header">
       <div class="container header__container">
-        <div class="header__brand">
-          <img
-            class="header__logo"
-            src="img/logo.png"
-            alt="Logo Barbara Formoso"
-          />
+        <a class="header__brand" href="index.html" aria-label="Barbara Formoso Coaching, ir al inicio">
+          <img class="header__logo" src="img/logo.png" alt="" width="52" height="52" />
 
-          <h1 class="header__title">
+          <p class="header__title">
             Barbara Formoso <br />
             Coaching
-          </h1>
-        </div>
+          </p>
+        </a>
 
-        <nav class="header__nav">
+        <nav class="header__nav" aria-label="Principal">
           <ul class="header__nav-list">
             <li>
-              <a class="header__nav-link" href="#">Inicio</a>
+              <a class="header__nav-link" href="index.html" aria-current="page">Inicio</a>
             </li>
 
             <li>
-              <a class="header__nav-link" href="#">Sobre mí</a>
+              <a class="header__nav-link" href="sobre-mi.html">Sobre mí</a>
             </li>
 
             <li>
-              <a class="header__nav-link" href="#">Servicios</a>
+              <a class="header__nav-link" href="servicios.html">Servicios</a>
             </li>
 
             <li>
-              <a class="header__nav-link" href="#">Contacto</a>
+              <a class="header__nav-link" href="contacto.html">Contacto</a>
             </li>
           </ul>
         </nav>
 
-        <div class="header__photo">
-          <img src="img/profile_picture.png" alt="Barbara Formoso" />
-        </div>
+        <a class="header__photo" href="sobre-mi.html" aria-label="Conocé a Barbara">
+          <img src="img/barbara_avatar.jpg" alt="" width="56" height="56" />
+        </a>
       </div>
     </header>
 
@@ -67,7 +75,7 @@
               Claridad • Transformación • Liderazgo
             </span>
 
-            <h2 class="hero__title">Lidera tu transformación.</h2>
+            <h1 class="hero__title">Lidera tu transformación.</h1>
 
             <p class="hero__description">
               Coaching integral para profesionales y líderes que buscan
@@ -75,16 +83,22 @@
             </p>
 
             <div class="hero__buttons">
-              <a class="button" href="#"> Reservar sesión </a>
+              <a class="button" href="form.html"> Reservar sesión </a>
 
-              <a class="button hero__secondary-button" href="#">
+              <a class="button hero__secondary-button" href="servicios.html">
                 Conocer más
               </a>
             </div>
           </div>
 
           <div class="hero__image">
-            <img src="img/main_foto.jpg" alt="Imagen workspace" />
+            <img
+              src="img/main_foto.jpg"
+              alt="Mesa de trabajo con una planta y un café, en un espacio luminoso"
+              width="736"
+              height="1104"
+              fetchpriority="high"
+            />
           </div>
         </div>
       </section>
@@ -92,7 +106,7 @@
       <section class="benefits">
         <div class="container benefits__container">
           <article class="benefits__card">
-            <h3 class="benefits__card-title">Claridad mental</h3>
+            <h2 class="benefits__card-title">Claridad mental</h2>
 
             <p class="benefits__card-text">
               Despejá el ruido interno y tomá decisiones con mayor seguridad.
@@ -100,7 +114,7 @@
           </article>
 
           <article class="benefits__card">
-            <h3 class="benefits__card-title">Liderazgo consciente</h3>
+            <h2 class="benefits__card-title">Liderazgo consciente</h2>
 
             <p class="benefits__card-text">
               Potenciá tu crecimiento profesional desde un enfoque humano.
@@ -108,7 +122,7 @@
           </article>
 
           <article class="benefits__card">
-            <h3 class="benefits__card-title">Transformación real</h3>
+            <h2 class="benefits__card-title">Transformación real</h2>
 
             <p class="benefits__card-text">
               Procesos sostenibles enfocados en resultados reales y equilibrio
@@ -123,7 +137,11 @@
           <div class="visual__image">
             <img
               src="img/secondary_foto.jpg"
-              alt="Foto de hojas desenfocadas"
+              alt="Detalle de una hoja verde"
+              width="564"
+              height="1002"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -153,8 +171,21 @@
           </p>
         </div>
 
-        <a class="button" href="#"> Agendar una sesión </a>
+        <a class="button" href="form.html"> Agendar una sesión </a>
+      </div>
+
+      <div class="container footer__bottom">
+        <nav aria-label="Pie de página">
+          <ul class="footer__links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <p>© <span data-year>2026</span> Barbara Formoso Coaching</p>
       </div>
     </footer>
+    <script src="script.js" defer></script>
   </body>
 </html>
